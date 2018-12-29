@@ -1,6 +1,10 @@
+package App;
+
+import Data.Pracownik;
+
 public class Firma {
     public static void main(String[] args) {
-        final String appName = "Firma v0.3";
+        final String appName = "Firma v0.4";
 
         Pracownik Dyrektor = new Pracownik("Paweł Siwek", "Central Product Owner", "CACI", 5, "Zarzadzanie");
 
