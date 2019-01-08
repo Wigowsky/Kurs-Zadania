@@ -7,7 +7,7 @@ public class PointApplication {
     public static final int ADD_X = 1;
     public static final int ADD_Y = 0;
     public static final int MINUS_X = 1;
-    public static final int MINUS_Y = 0;
+    public static final int MINUS_Y = 3;
 
     public static void main (String[] args)
     {
@@ -20,8 +20,11 @@ public class PointApplication {
                 pc.addX(p1);
                 System.out.println("Punkt addX: (" + p1.getX()+";"+p1.getY()+")");
                 break;
-            default:
+            case 0:
                 System.out.println("Brak zmian dla ADD_X");
+                break;
+            default:
+                System.out.println("Podana błędna wartość");
         }
 
         switch (ADD_Y) {
@@ -30,8 +33,12 @@ public class PointApplication {
                 pc.addY(p1);
                 System.out.println("Punkt addY: (" + p1.getX()+";"+p1.getY()+")");
                 break;
-            default:
+            case 0:
                 System.out.println("Brak zmian dla ADD_Y");
+                break;
+            default:
+                System.out.println("Podana błędna wartość");
+
         }
 
         switch (MINUS_X) {
@@ -40,8 +47,12 @@ public class PointApplication {
                 pc.minusX(p1);
                 System.out.println("Punkt minusX: (" + p1.getX()+";"+p1.getY()+")");
                 break;
-            default:
+            case 0:
                 System.out.println("Brak zmian dla MINUS_X");
+                break;
+            default:
+                System.out.println("Podana błędna wartość");
+
         }
 
 
@@ -51,8 +62,11 @@ public class PointApplication {
                 pc.minusY(p1);
                 System.out.println("Punkt minusY: (" + p1.getX()+";"+p1.getY()+")");
                 break;
-            default:
+            case 0:
                 System.out.println("Brak zmian dla MINUS_Y");
+                break;
+            default:
+                System.out.println("Podana błędna wartość");
         }
 
 
