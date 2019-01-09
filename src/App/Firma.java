@@ -4,21 +4,22 @@ import Data.Pracownik;
 
 public class Firma {
     public static void main(String[] args) {
-        final String appName = "Firma v0.4";
+        final String appName = "Firma v0.5";
 
-        Pracownik Dyrektor = new Pracownik("Paweł Siwek", "Central Product Owner", "CACI", 5, "Zarzadzanie");
+        Pracownik[] Pracownicy = new Pracownik[1000];
+        Pracownicy[0] = new Pracownik("Paweł Siwek", "Central Product Owner", "CACI", 5, "Zarzadzanie");
 
-        Pracownik Kierownik = new Pracownik("Agata Walaszek", "Product Owner", "CACI", 3, "Zarzadzanie");
+        Pracownicy[1] = new Pracownik("Agata Walaszek", "Product Owner", "CACI", 3, "Zarzadzanie");
 
-        Pracownik Nowy = new Pracownik("Dietmar Skrzydło", "Analityk Aplikacji", "DAD", 1, "IT");
+        Pracownicy[2] = new Pracownik("Dietmar Skrzydło", "Analityk Aplikacji", "DAD", 1, "IT");
 
         System.out.println(appName);
         System.out.println("Zatrudnieni w dziale :");
-        Dyrektor.printInfo();
-        Kierownik.printInfo();
-        Nowy.printInfo();
+        Pracownicy[0].printInfo();
+        Pracownicy[1].printInfo();
+        Pracownicy[2].printInfo();
 
-
+        System.out.println("W firmie może pracować " + Pracownicy.length + " pracowników");
     }
 }
 /*
