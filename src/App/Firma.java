@@ -1,25 +1,28 @@
 package App;
 
 import Data.Pracownik;
+import utlis.DataReader;
+
+import javax.xml.crypto.Data;
 
 public class Firma {
     public static void main(String[] args) {
-        final String appName = "Firma v0.5";
+        final String appName = "Firma v0.6";
 
         Pracownik[] Pracownicy = new Pracownik[1000];
-        Pracownicy[0] = new Pracownik("Paweł Siwek", "Central Product Owner", "CACI", 5, "Zarzadzanie");
-
-        Pracownicy[1] = new Pracownik("Agata Walaszek", "Product Owner", "CACI", 3, "Zarzadzanie");
-
-        Pracownicy[2] = new Pracownik("Dietmar Skrzydło", "Analityk Aplikacji", "DAD", 1, "IT");
+        DataReader dataReader = new DataReader();
 
         System.out.println(appName);
-        System.out.println("Zatrudnieni w dziale :");
+        System.out.println("Wprowadz pracownika :");
+        Pracownicy[0]= dataReader.readAndCreatePracownik();
+        Pracownicy[1]=dataReader.readAndCreatePracownik();
+        dataReader.close();
+
         Pracownicy[0].printInfo();
         Pracownicy[1].printInfo();
-        Pracownicy[2].printInfo();
 
-        System.out.println("W firmie może pracować " + Pracownicy.length + " pracowników");
+
+        System.out.println("System może przechowywać do " + Pracownicy.length + " pracowników");
     }
 }
 /*

@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+public class InOut {
+    public static void main (String[] args) {
+        Scanner input =  new Scanner(System.in);
+
+        System.out.println("Wporwadź imię");
+        String firstName = input.nextLine();
+        System.out.println("Wprowadź swoje nazwisko: ");
+        String lastName = input.nextLine();
+        System.out.println("Podaj swój wiek: ");
+        int age = input.nextInt();
+
+        input.close();
+
+        System.out.println("Cześć " + firstName + " " + lastName );
+        System.out.println("Lat masz " + age    );
+
+    }
+}
