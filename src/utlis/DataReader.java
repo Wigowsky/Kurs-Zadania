@@ -14,6 +14,12 @@ public class DataReader {
         sc.close();
     }
 
+    public int getInt(){
+        int number = sc.nextInt();
+        sc.nextLine();
+        return number;
+    }
+
     public Pracownik readAndCreatePracownik(){
 
         System.out.println("Name: ");

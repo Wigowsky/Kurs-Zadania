@@ -7,22 +7,10 @@ import javax.xml.crypto.Data;
 
 public class Firma {
     public static void main(String[] args) {
-        final String appName = "Firma v0.6";
-
-        Pracownik[] Pracownicy = new Pracownik[1000];
-        DataReader dataReader = new DataReader();
-
+        final String appName = "Firma v0.7";
         System.out.println(appName);
-        System.out.println("Wprowadz pracownika :");
-        Pracownicy[0]= dataReader.readAndCreatePracownik();
-        Pracownicy[1]=dataReader.readAndCreatePracownik();
-        dataReader.close();
-
-        Pracownicy[0].printInfo();
-        Pracownicy[1].printInfo();
-
-
-        System.out.println("System może przechowywać do " + Pracownicy.length + " pracowników");
+        HRControl hrControl = new HRControl();
+        hrControl.controlLoop();
     }
 }
 /*
